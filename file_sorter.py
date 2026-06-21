@@ -33,7 +33,7 @@ def organize_folder(target_path):
             print("Temp file found. Do you want to delete them y/n: ")
             delete = input()
             if delete == 'y':
-                print(f"🗑️ Deleting temporary file: {item.name}")
+                print(f"Deleting temporary file: {item.name}")
                 item.unlink()  
                 continue
 
@@ -50,7 +50,7 @@ def organize_folder(target_path):
         
         final_destination = destination_dir / item.name
         
-        print(f"📁 Moving {item.name} -> {destination_folder_name}/")
+        print(f"Moving {item.name} -> {destination_folder_name}/")
         shutil.move(str(item), str(final_destination))
 
     print("\nSorting complete!")
